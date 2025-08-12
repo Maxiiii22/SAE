@@ -1,5 +1,5 @@
 (() => {
-    const BASE_URL = "http://localhost/saewebadmin";
+    const BASE_URL = "http://localhost/SAE_V2/saewebadmin";
 
     function inicializarDetalleCarrera(codCarrera) {
         fetch(BASE_URL + "/admin/api/carreras/detalle_carrera_api.php?codCarrera=" + codCarrera + "&fetch=1")

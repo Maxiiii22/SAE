@@ -6,13 +6,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['codMateria']) && isset(
     header('Content-Type: application/json');
     $codMateria = $_GET['codMateria'];
 
-    $query = "SELECT CODIGO_MATERIA, NOMBRE_MATERIA FROM materias WHERE CODIGO_MATERIA = ?";
+    $query = "SELECT CODIGO_MATERIA, NOMBRE_MATERIA, ID_CARRERA FROM materias WHERE CODIGO_MATERIA = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $codMateria);
     $stmt->execute();
     $result = $stmt->get_result();
     $materia = $result->fetch_assoc();
-    echo json_encode($materia);
+
+    // **Obtener la lista de carreras**
+    $queryCarreras = "SELECT ID_CARRERA, TITULO_ABREVIADO, DESCRIPCION FROM carreras";
+    $resultCarreras = mysqli_query($conn, $queryCarreras);
+    $carreras = [];
+    
+    while ($row = mysqli_fetch_assoc($resultCarreras)) {
+        $carreras[] = [
+            'ID_CARRERA' => $row['ID_CARRERA'],
+            'TITULO_ABREVIADO' => $row['TITULO_ABREVIADO'],
+            'DESCRIPCION' => $row['DESCRIPCION']
+        ];
+    }
+
+    echo json_encode(["materia" => $materia, "carreras" => $carreras]);
     exit;
 }
 
@@ -26,15 +40,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
+    $idCarrera = $input['idCarrera'];
     $codMateria = $input['codMateria'];
     $nombreMateria = $input['nombreMateria'];
 
     $conn->begin_transaction();
 
     try {
-        $query = "UPDATE materias SET NOMBRE_MATERIA = ? WHERE CODIGO_MATERIA = ?";
+        $query = "UPDATE materias SET ID_CARRERA = ?, NOMBRE_MATERIA = ? WHERE CODIGO_MATERIA = ?";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("si", $nombreMateria, $codMateria);
+        $stmt->bind_param("isi", $idCarrera, $nombreMateria, $codMateria);
         $stmt->execute();
         $stmt->close();
 

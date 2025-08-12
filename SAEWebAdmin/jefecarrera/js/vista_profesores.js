@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiUrl = `http://localhost/saewebadmin/jefecarrera/api/vista_profesores_api.php`;
+    const apiUrl = `http://localhost/SAE_V2/saewebadmin/jefecarrera/api/vista_profesores_api.php`;
 
     // Hacer el request a la API para obtener los datos
     fetch(apiUrl)
@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     const carrerasSet = new Set();
 
                     profesores.forEach(profesor => {
+                        console.log(profesor.MATERIAS_COMPLETAS)
                         profesorsSet.add(`${profesor.NOMBRE_PERSONA} ${profesor.APELLIDO_PERSONA}`);
                         if (profesor.MATERIAS_COMPLETAS) {
                             const materias = profesor.MATERIAS_COMPLETAS.split('<br>').map(materia => materia.split(' – ')[0]);
                             materias.forEach(materia => materiasSet.add(materia));
 
-                            const turnos = profesor.MATERIAS_COMPLETAS.split('<br>').map(materia => materia.split(' - Turno ')[1]);
+                            const turnos = profesor.MATERIAS_COMPLETAS.split('<br>').map(materia => materia.split(' - ')[1]);
                             turnos.forEach(turno => turnosSet.add(turno));
 
                             const anios = profesor.MATERIAS_COMPLETAS.split('<br>').map(materia => {

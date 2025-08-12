@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const BASE_URL = `http://localhost/saewebadmin`;
+    const BASE_URL = `http://localhost/SAE_V2/saewebadmin`;
     const apiUrl = `${BASE_URL}/jefecarrera/api/jefe_api.php`;
 
     // Cargar datos iniciales

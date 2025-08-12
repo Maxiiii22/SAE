@@ -1,5 +1,5 @@
 (() => {
-    const BASE_URL = "http://localhost/saewebadmin";
+    const BASE_URL = "http://localhost/SAE_V2/saewebadmin";
 
     let datosMaterias = [];
     let paginaMateriasActual = 1;
@@ -194,7 +194,7 @@
             if (res.exito) {
                 Swal.fire({
                     title: "Materia añadida",
-                    text: "✅ " + res.mensaje,
+                    text: res.mensaje,
                     icon: "success"
                 });
                 document.getElementById("formAgregarMateria").reset();
@@ -203,7 +203,7 @@
             } else {
                 Swal.fire({
                     title: "Algo salio mal",
-                    text: "❌ " + res.mensaje,
+                    text: res.mensaje,
                     icon: "warning"
                 });
             }

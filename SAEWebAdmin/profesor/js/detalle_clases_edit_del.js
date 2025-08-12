@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const BASE_URL = "http://localhost/saewebadmin";
+    const BASE_URL = "http://localhost/SAE_V2/saewebadmin";
     const apiUrlEditDel = `${BASE_URL}/profesor/api/clases_edit_del.php`;
 
     // Delegar eventos para Editar

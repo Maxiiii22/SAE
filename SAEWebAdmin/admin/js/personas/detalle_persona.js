@@ -1,5 +1,5 @@
 (() => {
-    const BASE_URL = "http://localhost/saewebadmin";
+    const BASE_URL = "http://localhost/SAE_V2/saewebadmin";
 
     function inicializarDetallePersona(dni) {
         fetch(BASE_URL + "/admin/api/personas/detalle_personas_api.php?dni=" + dni)
@@ -24,13 +24,18 @@
 
                 if (data.MAIL_USUARIO && data.CONTRASEÑA_USUARIO) {
                     mailInput.value = data.MAIL_USUARIO;
+                    mailInput.disabled = false;
                     passInput.value = data.CONTRASEÑA_USUARIO;
+                    passInput.disabled = false;
                     usuarioContainer.style.display = "block";
                     mensajeUsuarioNoRegistrado.style.display = "none";
                 } else {
                     usuarioContainer.style.display = "block";
                     mensajeUsuarioNoRegistrado.style.display = "block";
                     mailInput.closest('.row').style.display = "none";
+                    mailInput.disabled = true;
+                    passInput.disabled = true;
+
                 }
 
                 let tabla = document.getElementById("tablaMaterias");
@@ -94,25 +99,25 @@
                     tabla.innerHTML += `
                         <tr>
                             <td>
-                                <select id="selectCarreraNewRow" class="form-control select-carrera select-newValue" required disabled>
+                                <select id="selectCarreraNewRow" class="form-select select-carrera select-newValue" required disabled>
                                     <option value="" hidden>Seleccionar Carrera</option>
                                     ${data.carreras.map(c => `<option value="${c.ID_CARRERA}">${c.DESCRIPCION}</option>`).join("")}
                                 </select>
                             </td>
                             <td>
-                                <select class="form-control select-materia select-newValue" required disabled>
+                                <select class="form-select select-materia select-newValue" required disabled>
                                     <option value="" hidden>Seleccionar Materia</option>
                                     ${data.materiasList.map(m => `<option value="${m.CODIGO_MATERIA}">${m.NOMBRE_MATERIA}</option>`).join("")}
                                 </select>
                             </td>
                             <td>
-                                <select class="form-control select-comision select-newValue" required disabled>
+                                <select class="form-select select-comision select-newValue" required disabled>
                                     <option value="" hidden>Seleccionar Comisión</option>
                                     ${data.comisiones.map(co => `<option value="${co.CODIGO_COMISION}">${co.DESCRIPCION}</option>`).join("")}
                                 </select>
                             </td>
                             <td>
-                                <select class="form-control select-horario select-newValue" required disabled>
+                                <select class="form-select select-horario select-newValue" required disabled>
                                     <option value="" hidden>Seleccionar Horario</option>
                                     ${data.horarios.map(h => `<option value="${h.CODIGO_HORARIO}">${h.HORARIO}</option>`).join("")}
                                 </select>
@@ -148,8 +153,8 @@
                                             `<option value="${h.CODIGO_HORARIO}" ${materia.CODIGO_HORARIO ? (h.CODIGO_HORARIO == materia.CODIGO_HORARIO ? "selected" : "") : ""}>${h.HORARIO}</option>`).join("")}
                                     </select>
                                 </td>
-                                <td>
-                                    <button type="button" class="form-control btn btn-danger btnEliminarMateriaPersona" 
+                                <td class="text-nowrap">
+                                    <button type="button" class="form-control btn btn-danger btnEliminarMateriaPersona w-auto" 
                                     data-materiapersonadni="${data.DNI_PERSONA}"
                                     data-materiapersonacarrera="${materia.ID_CARRERA}"
                                     data-materiapersonamateria="${materia.CODIGO_MATERIA}"

@@ -99,12 +99,22 @@ h3, h4 {
     flex: 1;
 }
 
+.form-control{
+    cursor: pointer;
+}
+
+.form-control:disabled{
+    background-color: #d6d6d6;
+    cursor: not-allowed;  
+    pointer-events: none; /* Esto evita clicks */
+}
 
 .selectMaterias:disabled,
 .select-newValue:disabled,
 .select-asignarCarrera:disabled,
 .select-carrera-td:disabled,
-.btnEliminarMateriaPersona:disabled{
+.btnEliminarMateriaPersona:disabled,
+.btnEliminarCarreraPersona:disabled{
     cursor: not-allowed;
     pointer-events: none; /* Esto evita clicks */
     background-color: #666;
@@ -120,8 +130,3 @@ h3, h4 {
     border-color: #666;
 }
 
-
-
-.form-control{
-    cursor: pointer;
-}

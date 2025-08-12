@@ -1,5 +1,5 @@
 (() => {
-    const BASE_URL = "http://localhost/saewebadmin";
+    const BASE_URL = "http://localhost/SAE_V2/saewebadmin";
 
     let datosPersonas = [];
     let paginaPersonasActual = 1;
@@ -45,7 +45,7 @@
             .then(response => response.json())
             .then(data => {
                 let selectRol = document.getElementById("codigoRolNuevo");
-                selectRol.innerHTML = '<option value="">Seleccione un rol</option>';
+                selectRol.innerHTML = '<option value="" hidden>Seleccione un rol</option>';
 
                 data.roles.forEach(rol => {
                     let option = document.createElement("option");

@@ -34,6 +34,10 @@ $codMateria = $_GET['codMateria'];
                     <label class="text-white">Nombre:</label>
                     <input type="text" id="nombreMateria" class="form-control">
                 </div>
+                <div class="col-md-6 mt-2">
+                    <label class="text-white">Carrera:</label>
+                    <select name="codCarrera" id="selectCarrera" class="form-select"></select>
+                </div>
             </div>
             <button type="submit" class="btn btn-success mt-3">Guardar Cambios</button>
         </form>

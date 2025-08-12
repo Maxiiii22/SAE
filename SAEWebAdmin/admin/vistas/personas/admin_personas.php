@@ -30,8 +30,8 @@ include '../../../config/config.php';
                 </div>
                 <div class="col-md-3">
                     <label for="codigoRolNuevo" class="form-label">Rol:</label>
-                    <select class="form-control" id="codigoRolNuevo" required>
-                        <option value="">Seleccione un rol</option>
+                    <select class="form-select" id="codigoRolNuevo" required>
+                        <option value="" hidden>Seleccione un rol</option>
                     </select>
                 </div>
             </div>

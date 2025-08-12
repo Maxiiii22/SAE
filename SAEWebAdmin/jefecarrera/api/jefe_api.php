@@ -45,9 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         SELECT pcm.CODIGO_MATERIA, p.DNI_PERSONA, p.NOMBRE_PERSONA, p.APELLIDO_PERSONA, m.NOMBRE_MATERIA, cm.CODIGO_COMISION, cm.DESCRIPCION AS COMISION, 
                h.CODIGO_HORARIO, h.HORARIO, t.DESCRIPCION AS TURNO, 
                CASE 
-                   WHEN m.CODIGO_MATERIA < 2000 THEN '1°'
-                   WHEN m.CODIGO_MATERIA < 3000 THEN '2°'
-                   ELSE '3°'
+                   WHEN (m.CODIGO_MATERIA >= 11000 AND m.CODIGO_MATERIA < 12000) OR (m.CODIGO_MATERIA >= 21000 AND m.CODIGO_MATERIA < 22000)  THEN '1°'
+                   WHEN (m.CODIGO_MATERIA >= 12000 AND m.CODIGO_MATERIA < 13000) OR (m.CODIGO_MATERIA >= 22000 AND m.CODIGO_MATERIA < 23000)  THEN '2°'
+                   WHEN (m.CODIGO_MATERIA >= 13000 AND m.CODIGO_MATERIA < 14000) OR (m.CODIGO_MATERIA >= 23000 AND m.CODIGO_MATERIA < 24000)  THEN '3°'
+                   ELSE 'Ajustar año en jefe_api.php'
                END AS ANIO,
                pcm.ID_CARRERA  
         FROM personas_carreras_materias pcm

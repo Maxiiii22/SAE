@@ -21,7 +21,7 @@ SELECT u.DNI_PERSONA, p.NOMBRE_PERSONA, p.APELLIDO_PERSONA, u.MAIL_USUARIO,
            CONCAT(
                m.NOMBRE_MATERIA COLLATE utf8_general_ci, ' – ',
                cm.DESCRIPCION COLLATE utf8_general_ci, ' - Turno ', t.DESCRIPCION COLLATE utf8_general_ci, 
-               ' (<b>Carrera:</b> ', c.TITULO_ABREVIADO, ')'
+               ' - (<b>Carrera:</b> ', c.TITULO_ABREVIADO, ')'
            ) SEPARATOR '<br>' 
        ) AS MATERIAS_COMPLETAS
 FROM usuarios u 

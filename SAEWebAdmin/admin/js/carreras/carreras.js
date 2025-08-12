@@ -1,5 +1,5 @@
 (() => {
-    const BASE_URL = "http://localhost/saewebadmin";
+    const BASE_URL = "http://localhost/SAE_V2/saewebadmin";
 
     let datosCarreras = [];
     let paginaCarrerasActual = 1;
@@ -36,7 +36,7 @@
         }, 300);
     }
 
-    // 🔹 Cargar las materias desde la API
+    // 🔹 Cargar las CARRERRAS desde la API
     function inicializarCarreras() {
         fetch(`${BASE_URL}/admin/api/carreras/carreras_api.php`)
             .then(response => response.json())
