@@ -1,0 +1,237 @@
+/* Estilo del fondo general */
+.mybody {
+    background-image: url('../../assets/azul3.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.sae {
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Títulos */
+h3, h4 {
+    color: #ffffff;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para colocar los campos en la misma fila */
+.horarios-row {
+    display: flex;
+    gap: 10px;
+}
+
+.horarios-row .form-group {
+    flex: 1;
+}
+
+.btn-ver-clases {
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Estilo para el contenedor de la carrera */
+#info-carrera {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Estilo de los títulos */
+#titulo-carrera,
+#descripcion-carrera {
+    margin-right: 20px;
+}
+
+/* Resolver alineación del texto de la resolución */
+#resolucion {
+    font-weight: normal;
+    color: white;
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Botón de Profesores */
+.btn-efecto-profesores {
+    background-color: #0069c0;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 105, 192, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-efecto-profesores:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 105, 192, 0.4);
+}
+
+.btn-efecto-profesores .material-icons {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+#info-carrera .d-flex {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#info-carrera .d-flex.mt-2 {
+    margin-top: 15px;
+}
+
+#info-carrera .d-flex.align-items-center {
+    justify-content: flex-start;
+}
+
+#info-carrera .d-flex.align-items-center .material-icons {
+    margin-right: 10px;
+}
+
+/* Títulos de los filtros */
+.form-label {
+    color: #b0b0b0;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    padding: 15px;
+    overflow: hidden; /* Para evitar desbordamientos de contenido */
+}
+
+.card:hover {
+    transform: scale(1.03); /* Reducir el tamaño de aumento en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Estilo del botón de eliminar */
+.eliminar-profesor {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.eliminar-profesor:hover {
+    background-color: #e60000;
+}
+
+/* Asegurar una buena presentación en pantalla */
+.card-profesor {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Ajuste para que las cards se alineen correctamente */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.col-md-3 {
+    flex: 0 0 23%;
+    max-width: 28%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Ajustes para la lista de materias */
+.card-subtitle {
+    /*margin-top: 10px;*/
+    font-size: 0.95rem; /* Reducir tamaño de la fuente */
+    line-height: 1.4; /* Incrementar espaciado entre líneas */
+    color: #555; /* Color más suave */
+    word-wrap: break-word; /* Asegurar que el texto se ajuste */
+}
+
+.card-subtitle div {
+    margin-bottom: 8px; /* Separar visualmente las materias */
+    padding: 5px 0; /* Padding interno */
+    border-bottom: 1px solid #ddd; /* Línea sutil entre materias */
+    color: #444; /* Mejor contraste */
+}
+
+.card-subtitle div:last-child {
+    border-bottom: none; /* Eliminar la línea del último elemento */
+}
+
+.card-subtitle div:hover {
+    background-color: #f0f0f0; /* Resaltar materia al pasar el cursor */
+}
+
+.card-subtitle div:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contenedor principal para las materias */
+.card-subtitle-container {
+    /*margin-top: 10px;*/
+    font-size: 0.95rem; /* Reducir tamaño de fuente */
+    line-height: 1.4; /* Espaciado entre líneas */
+    color: #555; /* Color suave */
+    word-wrap: break-word; /* Asegurar que el texto se ajuste */
+}
+
+/* Cada materia individual */
+.card-subtitle-item {
+    margin-bottom: 8px; /* Espacio entre materias */
+    padding: 5px 0; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Línea sutil entre materias */
+    color: #444; /* Mejor contraste */
+}
+
+.card-subtitle-item:last-child {
+    border-bottom: none; /* Eliminar línea del último elemento */
+}
+
+.card-subtitle-item:hover {
+    background-color: #f0f0f0; /* Resaltar materia al pasar el cursor */
+    cursor: pointer;
+}

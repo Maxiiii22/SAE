@@ -1,0 +1,100 @@
+/* Estilo del fondo general */
+.mybody {
+    background-image: url('../../assets/azul3.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+/* Navbar (sin márgenes) */
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.sae {
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Títulos */
+h3, h4 {
+    color: #ffffff;
+    margin: 20px 0 20px 0;
+}
+
+/* Cards de Materias */
+.card {
+    margin: 10px;
+}
+.card .card-body {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px; /* Ajuste para un espaciado uniforme */
+}
+.card-text {
+    margin: 5px 0;
+}
+
+/* Botón Ver Clases en el card */
+.card .btn-primary {
+    margin-top: 15px; /* Separación superior */
+    margin-bottom: 5px; /* Separación inferior */
+    width: 30%; /* Opcional, para que ocupe todo el ancho */
+}
+
+
+/* Contenedor de Clases (gris oscuro) */
+#clases-container {
+    margin: 10px; /* Margen de ambos lados */
+    background-color: #333333; /* Fondo gris oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+}
+.table {
+    width: 100%;
+    font-size: 0.9em;
+}
+.table tbody tr {
+    height: 30px;
+}
+.table tbody td {
+    padding: 5px;
+}
+
+/* Barra de Búsqueda y Botón "Agregar Nueva Clase" */
+#busquedaClase {
+    width: 25%;
+    margin-left: 10px;
+}
+#nuevaClase {
+    margin-right: 10px;
+    width: auto;
+}
+
+/* Íconos de acción para modificar y eliminar */
+.icono-accion {
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.icono-accion.modificar {
+    color: #ffc107;
+}
+.icono-accion.eliminar {
+    color: #dc3545;
+}
+
+/* Estilos para colocar los campos en la misma fila */
+.horarios-row {
+    display: flex;
+    gap: 10px;
+}
+
+.horarios-row .form-group {
+    flex: 1;
+}

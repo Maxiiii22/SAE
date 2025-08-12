@@ -1,0 +1,66 @@
+body {
+    background-image: url('../../assets/ITB1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.container {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sae{
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+
+/* Estilo del contenedor principal del formulario */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* Estilo para el formulario de registro */
+.formulario-registro {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+/* Ajustes a los títulos y etiquetas */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/* Botones */
+.btn-primary {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    width: 100%;
+}
+
+/* Color y forma de los inputs */
+.input-group-text {
+    background-color: #e9ecef;
+}
