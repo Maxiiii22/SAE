@@ -15,13 +15,13 @@ Esta pantalla permite a los usuarios autorizados registrarse en el sistema propo
 DNI, correo electrónico y contraseña.
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img2.jpg)
 
---
+---
 ## Pantalla de Inicio de Sesión
 Haciendo clic en “Iniciar sesión”, se muestra la pantalla para ingresar las credenciales correspondientes para 
 acceder al sistema.
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img3.jpg)
 
---
+---
 ## Pantalla de Gestión de Clases
 Desde el menú principal, iniciando sesión con perfil de usuario **Profesor** se accede automáticamente a la sección 
 Mis Materias, donde se muestra un listado de todas las materias asignadas al profesor. 
@@ -39,7 +39,7 @@ Esto abrirá un modal con los datos de la clase, que podrás actualizar y guarda
 mensaje emergente.
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img5.jpg)
 
---
+---
 
 ## Pantalla de Gestión de Carreras
 Desde el menú principal, iniciando sesión con perfil de usuario **Jefe de Área** se accede automáticamente a la 
@@ -59,7 +59,7 @@ Accediendo desde el botón “Profesores de la carrera”, se puede consultar la
 asociados a la carrera.
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img8.jpg)
 
---
+---
 
 ## Pantalla de Panel de Administración
 Desde el menú principal, iniciando sesión con perfil de **Superadministrador** se accede automáticamente a la sección 
@@ -93,5 +93,5 @@ materia tras confirmar en el mensaje emergente.
 que no tiene materias asignadas.
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img12.jpg)
 
---
+---
 
