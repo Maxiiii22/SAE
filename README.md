@@ -118,3 +118,25 @@ que no tiene carreras asignadas.
 
 ---
 
+## 🧠 Tecnologías Utilizadas
+
+| Tecnología       | Descripción                                      |
+|------------------|--------------------------------------------------|
+| Django           | Framework backend principal                      |
+| mySql            | Base de datos por defecto para desarrollo        |
+| HTML/CSS         | Maquetación responsive y diseño visual adaptable. |
+| JavaScript       | Funcionalidades personalizadas del lado del cliente. |
+
+---
+
+> **Superadmin de testeo:**
+> User: `adminsup@itbeltran.com`
+> Password: `111`
+
+> **Jefe de área de testeo:**
+> User: `admin@itbeltran.com`
+> Password: `111`
+
+> **Profesor de testeo:**
+> User: `ramirezj@itbeltran.com`
+> Password: `111`
