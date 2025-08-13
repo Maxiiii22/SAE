@@ -1,4 +1,7 @@
-# SAE - Sistema de Administracion Educativa
+# SAE - Sistema de Administración Educativa
+
+**SAe** es una plataforma de gestión académica que permita a profesores y responsables de área llevar un registro de clases, materias, novedades y profesores de las diferentes carreras del instituto. 
+El sistema les permite a profesores documentar, gestionar y dar seguimiento a las clases del instituto. Estará disponible tanto para profesores como responsables de cada área, los cuales podrán crear perfiles y acceder a la plataforma mediante un sistema de registro y login. Al ingresar, los usuarios tendrán diferentes funciones disponibles dependiendo de su rol en el instituto.
 
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img1.jpg)
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img2.jpg)
