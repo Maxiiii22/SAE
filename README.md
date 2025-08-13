@@ -106,5 +106,15 @@ que no tiene materias asignadas.
 
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img12.jpg)
 
+## Pantalla de Detalle de Persona (Jefe de Área)
+- Botón "Asignarle Nueva Carrera": Haciendo clic en el botón " Asignar Nueva Carrera ", Se activara el 
+desplegable “Seleccionar Carrera” que nos permitirá poder asignarle una nueva carrera a la persona.
+- Botón "Desasignar Carrera": Haciendo clic en el botón " Desasignar Carrera ", podrás desasignar una 
+carrera tras confirmar en el mensaje emergente.
+- Botón "Eliminar Persona": Haciendo clic en el botón " Eliminar Persona ", podrás eliminar a la persona si es 
+que no tiene carreras asignadas.
+
+![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img14.jpg)
+
 ---
 
