@@ -11,4 +11,5 @@
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img9.jpg)
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img10.jpg)
 ![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img11.jpg)
+![Vista previa](Documentacion/SRS%20-%20Archivos/imagesPreview/img12.jpg)
 
