@@ -12,7 +12,7 @@ if (!$codigoMateria || !$comision || !$horario) {
     exit();
 }
 
-// 🔹 Obtener información de la materia, comisión y horario 
+// Obtener información de la materia, comisión y horario 
 $sqlInfo = "
     SELECT 
         m.NOMBRE_MATERIA, 
@@ -34,7 +34,7 @@ $nombreMateria = $info['NOMBRE_MATERIA'] ?? 'Desconocido';
 $descripcionComision = $info['COMISION_DESCRIPCION'] ?? 'Desconocido';
 $descripcionHorario = $info['HORARIO_DESCRIPCION'] ?? 'Desconocido';
 
-// 🔹 Obtener el profesor asignado a la materia, comisión y horario
+// Obtener el profesor asignado a la materia, comisión y horario
 $sqlProfesor = "
     SELECT p.DNI_PERSONA, p.NOMBRE_PERSONA, p.APELLIDO_PERSONA
     FROM personas p
@@ -52,7 +52,7 @@ $profesor = $resultProfesor->fetch_assoc();
 $nombreProfesor = $profesor ? $profesor['NOMBRE_PERSONA'] . ' ' . $profesor['APELLIDO_PERSONA'] : 'No asignado';
 $dniProfesor = $profesor['DNI_PERSONA'] ?? null;
 
-// 🔹 Obtener el código de usuario del profesor en la tabla `usuarios`
+//  Obtener el código de usuario del profesor en la tabla `usuarios`
 $codigoUsuario = null;
 if ($dniProfesor) {
     $sqlUsuario = "SELECT CODIGO_USUARIO FROM usuarios WHERE DNI_PERSONA = ?";
@@ -64,7 +64,7 @@ if ($dniProfesor) {
     $codigoUsuario = $usuario['CODIGO_USUARIO'] ?? null;
 }
 
-// 🔹 Obtener las clases solo si el usuario existe
+//  Obtener las clases solo si el usuario existe
 $clases = [];
 if ($codigoUsuario) {
     $sqlClases = "
@@ -79,7 +79,7 @@ if ($codigoUsuario) {
     $clases = $resultClases->fetch_all(MYSQLI_ASSOC);
 }
 
-// 🔹 Respuesta JSON
+
 echo json_encode([
     'status' => 'success',
     'nombre_materia' => $nombreMateria,
@@ -89,7 +89,7 @@ echo json_encode([
     'clases' => $clases
 ]);
 
-// 🔹 Cerrar conexiones
+
 $stmtInfo->close();
 $stmtProfesor->close();
 if (isset($stmtUsuario)) $stmtUsuario->close();
